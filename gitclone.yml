@@ -1,0 +1,12 @@
+---
+ - hosts: all
+   user: root
+   become: yes
+   tasks:
+     - name: Clone a github repository
+       git:
+         repo: https://github.com/Ashokrekha/live01.git
+         dest: /root/live01/
+         clone: yes
+         update: yes
+

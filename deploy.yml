@@ -1,0 +1,10 @@
+---
+- hosts: all
+  user: root
+  become: yes
+  tasks:
+     - name: copy the WAR file to tomcat webapps directory
+       copy:
+        src: /root/live01/target/live.war
+        dest: /root/tomcat/apache-tomcat-9.0.83/webapps/
+        remote_src: yes
